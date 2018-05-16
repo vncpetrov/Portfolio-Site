@@ -1,0 +1,88 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@font-face {
+    font-family: 'ChampagneLimousines';
+    src: url('/fonts/champagne_limousines-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ChampagneLimousines';
+    src: url('/fonts/champagne_limousines_italic-webfont.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ChampagneLimousines';
+    src: url('/fonts/champagne_limousines_bold-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
+* {
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ChampagneLimousines', sans-serif;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: black;
+    font-size: 25px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+
+nav.navbar-default {
+    background-color: white;
+    border: 1px solid #96908E;
+    border-right: 0;
+    border-left: 0px;
+    min-height: 35px;
+    margin-top: 30px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a.selected {
+    color: #DEA295;
+    /*text-shadow: 0 0 2px #DEA295, 0 0 2px #DEA295;*/
+    /*text-shadow: 0 0 1px #DEA295, 0 0 1px #DEA295, 0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295;*/
+    -webkit-text-stroke: 1px #DEA295;
+} 
+
+.navbar-default .navbar-nav > li > a {
+    color: black;
+    line-height: 0px;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
