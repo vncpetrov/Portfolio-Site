@@ -22,19 +22,20 @@
     box-sizing: border-box;
 }
 
-body {
+body .content {
     font-family: 'ChampagneLimousines', sans-serif;
     padding-top: 50px;
-    padding-bottom: 20px;
     color: black;
     font-size: 30px;
+    min-width: 500px;
+    min-height: 650px;
 }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 /* Carousel */
@@ -47,7 +48,7 @@ body {
 .carousel-inner .item img[src$=".svg"] {
     width: 100%;
 }
-
+    
 /* QR code generator */
 #qrCode {
     margin: 15px;
@@ -60,20 +61,22 @@ nav.navbar {
     border-right: 0;
     border-left: 0px;
     min-height: 35px;
-    margin-top: 30px;
 }
 
+.navbar .navbar-nav > li.main > a {
+    transition-duration: 0.5s;
+}
 
 .navbar .navbar-nav > li.main > a:hover {
     color: #DEA295;
     /*text-shadow: 0 0 2px #DEA295, 0 0 2px #DEA295;*/
-    transition-duration: 0.3s;
     text-shadow: 0 0 1px #DEA295, 0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295;
     /*-webkit-text-stroke: 1px #DEA295;*/
+    transform: scale(1.06);
 }
 
 .navbar .navbar-nav > li.main > a.selected {
-    color: #DEA295;
+    color: #DEA295; 
     text-shadow: 0 0 1px #DEA295, 0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295;
 }
 
@@ -99,7 +102,7 @@ nav.navbar {
     padding-bottom: 6px;
 }
 
-.navbar .navbar-collapse{
+.navbar .navbar-collapse {
     text-align: center;
 }
 
@@ -115,9 +118,12 @@ li.lang:first-child {
     border-right: 1px solid black;
 }
 
-.navbar .lang > a:hover{
-    color: #dedee5;
+.navbar .lang > a {
     transition-duration: 0.5s;
+}
+
+.navbar .lang > a:hover {
+    color: #dedee5;
 }
 
 .navbar .lang > a.selected {
@@ -151,6 +157,36 @@ li.lang:first-child {
     width: 100%;
     margin: 0;
 }
+
+.footer {
+    background-color: white;
+    min-height: 50px;
+    margin-top: 20px;
+    min-width: 500px;
+}
+
+.footer ul {
+    text-align: center;
+}
+
+
+
+.footer ul li {
+    display: inline-block;
+    text-decoration: none;
+    padding-right: 20px;
+    border-radius: 3px;
+}
+
+.footer ul li .fab {
+    color: black;
+}
+
+.footer ul li .fab:hover {
+    cursor: pointer;
+}
+
+    
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
