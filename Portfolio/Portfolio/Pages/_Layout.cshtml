@@ -29,13 +29,19 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" id="nav-items">
-                    <li><a asp-page="/Index">МЖ</a></li>
-                    <li><a asp-page="/About">за мен</a></li>
-                    <li><a asp-page="/Contact">портфолио</a></li>
-                    <li><a asp-page="/Contact">контакти</a></li>
+                    <li class="main"><a asp-page="/Index">МЖ</a></li>
+                    <li class="main"><a asp-page="/About">за мен</a></li>
+                    <li class="main"><a asp-page="/Contact">портфолио</a></li>
+                    <li class="main"><a asp-page="/Contact">контакти</a></li>
                 </ul>
+
+                <div class="lang">
+                    <a href="/">BG</a>
+                    <a href="/en">EN</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -71,7 +77,7 @@
     @RenderSection("Scripts", required: false)
 
     <script>
-        $('nav li a[href="/' + location.pathname.split("/")[1] + '"]').addClass('selected');
+        $('nav a[href="/' + location.pathname.split("/")[1] + '"]').addClass('selected');
     </script>
 </body>
 </html>

@@ -27,7 +27,7 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
     color: black;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 /* Wrapping element */
@@ -54,7 +54,7 @@ body {
 }
 
 
-nav.navbar-default {
+nav.navbar {
     background-color: white;
     border: 1px solid #96908E;
     border-right: 0;
@@ -63,21 +63,94 @@ nav.navbar-default {
     margin-top: 30px;
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a.selected {
+
+.navbar .navbar-nav > li.main > a:hover {
     color: #DEA295;
     /*text-shadow: 0 0 2px #DEA295, 0 0 2px #DEA295;*/
-    /*text-shadow: 0 0 1px #DEA295, 0 0 1px #DEA295, 0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295;*/
-    -webkit-text-stroke: 1px #DEA295;
-} 
+    transition-duration: 0.3s;
+    text-shadow: 0 0 1px #DEA295, 0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295;
+    /*-webkit-text-stroke: 1px #DEA295;*/
+}
 
-.navbar-default .navbar-nav > li > a {
+.navbar .navbar-nav > li.main > a.selected {
+    color: #DEA295;
+    text-shadow: 0 0 1px #DEA295, 0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295;
+}
+
+.navbar .navbar-nav > li > a,
+.navbar .lang {
     color: black;
     line-height: 0px;
-    display: inline-block;
     letter-spacing: 1px;
 }
 
+/*.navbar .navbar-nav li.main:nth-child(4) {
+    border-right: 1px solid black;
+}*/
+
+.navbar .navbar-nav li {
+    border-left: 1px solid black;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+    padding-bottom: 6px;
+}
+
+.navbar .navbar-collapse{
+    text-align: center;
+}
+
+.navbar-collapse[aria-expanded="true"] li {
+    border: none !important;
+}
+
+.navbar-collapse.collapsing li {
+    border: none !important;
+}
+
+li.lang:first-child {
+    border-right: 1px solid black;
+}
+
+.navbar .lang > a:hover{
+    color: #dedee5;
+    transition-duration: 0.5s;
+}
+
+.navbar .lang > a.selected {
+    color: #dedee5;
+}
+
+.navbar .lang a:first-child {
+    border-right: 1px solid black;
+}
+
+.navbar .lang a {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    padding: 15px 5px; 
+    display: table-cell;
+    width: 35px;
+}
+
+.navbar .lang a:hover, .navbar .lang a:active, .navbar .lang a:focus {
+    text-decoration: none;
+}
+
+.navbar .lang {
+    display: inline-block;
+    float: right;
+    margin-top: 7px;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+}
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
