@@ -76,7 +76,8 @@ nav.navbar {
 }
 
 .navbar .navbar-nav > li.main > a.selected {
-    color: #DEA295; 
+    color: #DEA295;  
+    transition:none;
     text-shadow: 0 0 1px #DEA295, 0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295,0 0 1px #DEA295;
 }
 

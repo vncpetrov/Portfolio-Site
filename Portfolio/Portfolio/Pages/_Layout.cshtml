@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -34,15 +38,15 @@
 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" id="nav-items">
-                        <li class="main"><a asp-page="/Index">МЖ</a></li>
-                        <li class="main"><a asp-page="/About">за мен</a></li>
-                        <li class="main"><a asp-page="/Contact">портфолио</a></li>
-                        <li class="main"><a asp-page="/Contact">контакти</a></li>
+                        <li class="main"><a asp-page="/Index" rel="keep-params">@SharedLocalizer["MJ"]</a></li>
+                        <li class="main"><a asp-page="/About" rel="keep-params">@SharedLocalizer["AboutMe"]</a></li>
+                        <li class="main"><a asp-page="/Contact" rel="keep-params">@SharedLocalizer["Portfolio"]</a></li>
+                        <li class="main"><a asp-page="/Contact" rel="keep-params">@SharedLocalizer["Contacts"]</a></li>
                     </ul>
 
                     <div class="lang">
-                        <a href="/">BG</a>
-                        <a href="/en">EN</a>
+                        <a href="?culture=bg" target="_self">BG</a>
+                        <a href="?culture=en">EN</a>
                     </div>
                 </div>
             </div>
@@ -88,6 +92,19 @@
 
     <script>
         $('nav a[href="/' + location.pathname.split("/")[1] + '"]').addClass('selected');
+    </script>
+
+    <script>
+        $("a[rel~='keep-params']").click(function (e) {
+            e.preventDefault();
+
+            var params = window.location.search,
+                dest = $(this).attr('href') + params;
+
+            window.setTimeout(function () {
+                window.location.href = dest;
+            }, 100);
+        });
     </script>
 </body>
 </html>
