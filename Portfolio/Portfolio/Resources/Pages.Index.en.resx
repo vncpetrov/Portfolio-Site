@@ -123,10 +123,10 @@
   <data name="MassimoVignelli" xml:space="preserve">
     <value>Massimo Vignelli</value>
   </data>
-  <data name="String2" xml:space="preserve">
-    <value>is a life of fighting: Fighting with ugliness.</value>
-  </data>
   <data name="WisdomFirstHalf" xml:space="preserve">
     <value>The life of the designer</value>
+  </data>
+  <data name="WisdomSecondHalf" xml:space="preserve">
+    <value>is a life of fighting: Fighting with ugliness.</value>
   </data>
 </root>

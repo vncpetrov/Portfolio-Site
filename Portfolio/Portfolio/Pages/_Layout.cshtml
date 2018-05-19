@@ -25,32 +25,35 @@
 
 <body>
     <div class="content">
-        <nav class="navbar navbar-default navbar-top @*navbar-fixed-top*@">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
+        <div class="nav">
+            <nav class="navbar navbar-default navbar-top @*navbar-fixed-top*@">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
 
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav" id="nav-items">
-                        <li class="main"><a asp-page="/Index" rel="keep-params">@SharedLocalizer["MJ"]</a></li>
-                        <li class="main"><a asp-page="/About" rel="keep-params">@SharedLocalizer["AboutMe"]</a></li>
-                        <li class="main"><a asp-page="/Contact" rel="keep-params">@SharedLocalizer["Portfolio"]</a></li>
-                        <li class="main"><a asp-page="/Contact" rel="keep-params">@SharedLocalizer["Contacts"]</a></li>
-                    </ul>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav" id="nav-items">
+                            <li class="main"><a asp-page="/Index" rel="keep-params">@SharedLocalizer["MJ"]</a></li>
+                            <li class="main"><a asp-page="/About" rel="keep-params">@SharedLocalizer["AboutMe"]</a></li>
+                            <li class="main"><a asp-page="/Contact" rel="keep-params">@SharedLocalizer["Portfolio"]</a></li>
+                            <li class="main"><a asp-page="/Contact" rel="keep-params">@SharedLocalizer["Contacts"]</a></li>
+                        </ul>
 
-                    <div class="lang">
-                        <a href="?culture=bg" target="_self">BG</a>
-                        <a href="?culture=en">EN</a>
+                        <div class="lang">
+                            <a href="?culture=bg" target="_self">BG</a>
+                            <a href="?culture=en" target="_self">EN</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav> 
+        </div>
+
         <div class="container body-content">
             @RenderBody()
         </div>
@@ -92,6 +95,11 @@
 
     <script>
         $('nav a[href="/' + location.pathname.split("/")[1] + '"]').addClass('selected');
+        if (location.href.split("=")[1] === null || location.href.split("=")[1] === undefined) {
+            $('nav a[href="?culture=bg"]').addClass('selected');
+        } else {
+            $('nav a[href="?culture=' + location.href.split("=")[1] + '"]').addClass('selected');
+        }
     </script>
 
     <script>

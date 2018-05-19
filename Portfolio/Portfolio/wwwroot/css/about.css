@@ -1,0 +1,94 @@
+﻿div.nav {
+    background-image: url(../images/top.png);
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 2px solid darkgrey;
+}
+
+p {
+    margin: 0;
+}
+
+img.woman {
+    height: 1050px;
+}
+
+div.wrapper > * {
+    font-size: 28px;
+}
+
+div.wrapper {
+    position: relative;
+    left: 35px;
+    top: 30px;
+}
+
+div.section h1 {
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: bold;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 0 20px;
+}
+
+span.period {
+    line-height: 25px;
+    display: inline-block;
+    width: 185px;
+}
+
+
+section .information {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 30px;
+}
+
+section p {
+    font-size: 1.1em;
+    display: block;
+    letter-spacing: 1px;
+}
+
+section p.inst {
+    letter-spacing: 1px;
+    color: #DEA295;
+    font-weight: bold;
+}
+
+p.additional-info {
+    font-size: 0.95em;
+    position: relative;
+    bottom: 12px;
+}
+
+section, .section {
+    margin-top: 20px;
+}
+
+span.name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+i.fa-square {
+    font-size: 25px;
+    transform: scaleX(1.4) scaleY(0.9);
+    margin-right: 5px;
+}
+
+section.rating {
+    margin: 10px 0;
+    padding: 0;
+    line-height: 0;
+}
+
+span.bold {
+    font-weight: bold;
+    font-size: 25px;
+    /*text-align: right;*/
+}
