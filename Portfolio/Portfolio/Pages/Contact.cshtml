@@ -1,6 +1,8 @@
 ﻿@page
 @model ContactModel
 
+@inject IViewLocalizer Localizer;
+
 @{
     ViewData["Title"] = "Contact";
 }
@@ -10,7 +12,7 @@
 }
 
 <div>
-    <p class="holder">Мария Жорова</p>
+    <p class="holder">@Localizer["MJ"]</p>
     <p class="contacts">
         <i class="fas fa-envelope-square fa-2x"></i>
         <a href="mailto:jorova.maria@gmail.com" class="mail">jorova.maria@gmail.com</a>

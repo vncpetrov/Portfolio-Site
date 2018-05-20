@@ -1,12 +1,4 @@
-﻿div.nav {
-    background-image: url(../images/top.png);
-    min-height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: 2px solid darkgrey;
-}
-
-p {
+﻿p {
     margin: 0;
 }
 

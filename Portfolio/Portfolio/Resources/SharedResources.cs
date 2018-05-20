@@ -1,4 +1,4 @@
-﻿namespace Portfolio
+﻿namespace PortfolioApp
 {
     using System;
 
