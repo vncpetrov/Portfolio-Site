@@ -1,6 +1,8 @@
 ﻿@page
 @model IndexModel
 
+@inject IViewLocalizer Localizer
+
 @{
     ViewData["Title"] = "Home page";
 }
@@ -10,17 +12,19 @@
 }
 
 <div class="heading-section">
-    <h1 class="heading">Мария Жорова</h1>
+    <h1 class="heading">
+        @Localizer["MariaJorova"]
+    </h1>
 </div>
 
 <div class="wisdom">
     <p>
-        Животът на един дизайнер  
+        @Localizer["WisdomFirstHalf"] 
     </p>
     <p class="second">
-        е живот на борба: борба с грозотата.
+        @Localizer["WisdomSecondHalf"]
         <span>
-            Massimo Vignelli
+            @Localizer["MassimoVignelli"]
         </span>
     </p>
 </div>

@@ -1,9 +1,152 @@
 ﻿@page
 @model AboutModel
+
+@inject IViewLocalizer Localizer
+
 @{
     ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+@section Styles {
+    <link rel="stylesheet" href="~/css/navigation.css" />
+    <link rel="stylesheet" href="~/css/about.css" />
+}
+
+<img src="~/images/woman.png" alt="Women" class="woman" align="left">
+
+<div class="wrapper">
+    <div class="section">
+        <h1>
+            @Localizer["Education"]
+        </h1>
+
+        <section>
+            <span class="period">1996 - 2000</span>
+            <div class="information">
+                <p class="inst">@Localizer["ArtCollege"]</p>
+                <p class="additional-info">@Localizer["ArtSpecialty"]</p>
+            </div>
+        </section>
+
+        <section>
+            <span class="period">2014 - 2018</span>
+            <div class="information">
+                <p class="inst">@Localizer["RuseUniversity"]</p>
+                <p class="additional-info">@Localizer["RuseUniversitySpecialty"]</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="section">
+        <h1>
+            @Localizer["ProfessionalSkills"]
+        </h1>
+
+        <section>
+            <span class="period">1999 - 2000</span>
+            <div class="information">
+                <p class="inst">@Localizer["ProfessionalInternship"]</p>
+                <p class="inst"><span class="name">@Localizer["VIP-97"]</span>, @Localizer["Ruse"]</p>
+            </div>
+        </section>
+
+        <section>
+            <span class="period">2000 - 2004</span>
+            <div class="information">
+                <p class="inst">@Localizer["Associate"] <span class="name">@Localizer["VIP-97"]</span> и </p>
+                <p class="inst">@Localizer["Gallery"] <span class="name">@Localizer["VIP-97"]</span>, @Localizer["Ruse"]</p>
+            </div>
+        </section>
+
+        <section>
+            <span class="period">2007 - 2010</span>
+            <div class="information">
+                <p class="inst">@Localizer["PublicRelationships"] <span class="name">@Localizer["VPR"]</span> @Localizer["Advertisement"], </p>
+                <p class="inst">@Localizer["Ruse"]</p>
+
+            </div>
+        </section>
+
+        <section>
+            <span class="period">2015 - @Localizer["TillNow"]</span>
+            <div class="information">
+                <p class="inst">@Localizer["CoWorker"] <span class="name">@Localizer["NM design"]</span>, @Localizer["Ruse"]</p>
+                <p class="additional-info">@Localizer["Skills"]</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="section">
+        <section class="rating">
+            <span class="period bold">@Localizer["Creativity"]</span>
+            <div class="information">
+                <p class="inst">
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="far fa-square"></i>
+                </p>
+            </div>
+        </section>
+
+        <section class="rating">
+            <span class="period bold">@Localizer["Communication"]</span>
+            <div class="information">
+                <p class="inst">
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="far fa-square"></i>
+                    <i class="far fa-square"></i>
+                </p>
+            </div>
+        </section>
+
+        <section class="rating">
+            <span class="period bold">@Localizer["Adaptable"]</span>
+            <div class="information">
+                <p class="inst">
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="far fa-square"></i>
+                    <i class="far fa-square"></i>
+                    <i class="far fa-square"></i>
+                    <i class="far fa-square"></i>
+                </p>
+            </div>
+        </section>
+
+        <section class="rating">
+            <span class="period bold">@Localizer["Organized"]</span>
+            <div class="information">
+                <p class="inst">
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="fas fa-square"></i>
+                    <i class="far fa-square"></i>
+                    <i class="far fa-square"></i>
+                </p>
+            </div>
+        </section>
+    </div>
+</div>

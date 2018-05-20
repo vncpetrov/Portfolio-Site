@@ -1,0 +1,42 @@
+﻿body .content {
+    background-image: url(/images/contact-background.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+div.body-content {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 350px;
+    right: 30px;
+}
+
+p.contacts {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.holder {
+    font-size: 1.5em;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+i {
+    margin-right: 15px;
+}
+
+body .content {
+    min-height: 665px;
+}
+
+.mail {
+    color: black;
+}
+
+.mail:hover {
+    text-decoration: none;
+}
