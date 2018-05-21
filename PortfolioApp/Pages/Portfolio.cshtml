@@ -1,0 +1,108 @@
+﻿@page
+@model PortfolioModel
+
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "Portfolio";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/navigation.css" />
+    <link rel="stylesheet" href="~/css/portfolio.css" />
+}
+
+<aside>
+    <div class="toolbar mb2 mt2">
+        <button class="btn fil-cat" data-rel="rdesign">@Localizer["Design of Rituals"]</button>
+        <button class="btn fil-cat" data-rel="gdesign">@Localizer["Graphic Design"]</button>
+        <button class="btn fil-cat" data-rel="pcreativity">@Localizer["Personal Creativity"]</button>
+        <button class="btn fil-cat" href="" data-rel="all">@Localizer["All"]</button>
+
+    </div>
+</aside>
+
+<div class="gallery">
+    <div id="portfolio">
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-1.png" alt="Ritual Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-2.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-3.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-4.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-5.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-6.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-7.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-8.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-9.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-10.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-11.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-12.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-13.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-14.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm rdesign all">
+            <img src="~/images/rituals-15.png" alt="Graphical Design Image" />
+        </div>
+
+        <div class="tile scale-anm pcreativity all">
+            <img src="~/images/personal-1.png" alt="Personal Creativity Image" />
+        </div>
+        <div class="tile scale-anm pcreativity all">
+            <img src="~/images/personal-2.png" alt="Personal Creativity Image" />
+        </div>
+        <div class="tile scale-anm pcreativity all">
+            <img src="~/images/personal-3.png" alt="Personal Creativity Image" />
+        </div>
+        <div class="tile scale-anm pcreativity all">
+            <img src="~/images/personal-4.png" alt="Personal Creativity Image" />
+        </div>
+        <div class="tile scale-anm pcreativity all">
+            <img src="~/images/personal-5.png" alt="Personal Creativity Image" />
+        </div>
+
+        <div class="tile scale-anm gdesign all">
+            <img src="~/images/graphical-design-1.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm gdesign all">
+            <img src="~/images/graphical-design-2.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm gdesign all">
+            <img src="~/images/graphical-design-3.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm gdesign all">
+            <img src="~/images/graphical-design-4.png" alt="Graphical Design Image" />
+        </div>
+        <div class="tile scale-anm gdesign all">
+            <img src="~/images/graphical-design-5.png" alt="Graphical Design Image" />
+        </div>
+    </div>
+
+    <div style="clear:both;"></div>
+</div>
+
