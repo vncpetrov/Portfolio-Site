@@ -14,25 +14,23 @@ namespace PortfolioApp
 
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
-        
+
         public void ConfigureServices(IServiceCollection services)
         {
-<<<<<<< HEAD
-            services.AddRouting(opts => opts.LowercaseUrls = true);
-
             services.AddLocalization(opts => opts.ResourcesPath = "Resources");
 
             services.AddMvc()
                 .AddViewLocalization(
                     LanguageViewLocationExpanderFormat.Suffix,
                     opts => opts.ResourcesPath = "Resources");
-            
+
             services.Configure<RequestLocalizationOptions>(
                 opts =>
                 {
@@ -42,24 +40,6 @@ namespace PortfolioApp
                         new CultureInfo("en")
                     };
 
-=======
-            services.AddLocalization(opts => opts.ResourcesPath = "Resources");
-
-            services.AddMvc()
-                .AddViewLocalization(
-                    LanguageViewLocationExpanderFormat.Suffix,
-                    opts => opts.ResourcesPath = "Resources");
-            
-            services.Configure<RequestLocalizationOptions>(
-                opts =>
-                {
-                    var supportedCultures = new List<CultureInfo>
-                    {
-                        new CultureInfo("bg"),
-                        new CultureInfo("en")
-                    };
-
->>>>>>> 5b7114e6271205eff3fde3f49be2c1de8d67d3d6
                     opts.DefaultRequestCulture = new RequestCulture(supportedCultures.First());
                     opts.SupportedCultures = supportedCultures;
                     opts.SupportedUICultures = supportedCultures;
@@ -69,7 +49,7 @@ namespace PortfolioApp
                     };
                 });
         }
-        
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -86,7 +66,7 @@ namespace PortfolioApp
 
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(options.Value);
-            
+
             app.UseMvc();
         }
     }
